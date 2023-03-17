@@ -38,9 +38,7 @@ public class Resources : MonoBehaviour
             OnChangeCoins?.Invoke(Coins);
             return true;
         }
-        else 
-        {
-            return false;
-        }
+        
+        return false;
     }
 }

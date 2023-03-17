@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -27,11 +26,11 @@ public class Clickable : MonoBehaviour
         StartCoroutine(HitAnimation());
     }
 
-    public void Collect()
+    public void Collect(Vector3 collectPosition)
     {
         HitEffect hitEffect = Instantiate(_hitEffectPrefab, transform.position, Quaternion.identity);
         hitEffect.Init(_coinsPerClick);
-        _resources.CollectCoins(1, transform.position);
+        _resources.CollectCoins(1, collectPosition);
     }
     
     private IEnumerator HitAnimation()

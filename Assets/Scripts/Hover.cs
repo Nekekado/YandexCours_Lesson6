@@ -1,11 +1,14 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Hover : MonoBehaviour
 {
     [SerializeField] private Clickable _clickable;
+
+    private void OnBecameInvisible()
+    {
+        
+    }
 
     public void SetClickable(Clickable clickable)
     {
@@ -13,7 +16,7 @@ public class Hover : MonoBehaviour
     }
     private void OnMouseEnter()
     {
-        _clickable.Collect();
+        _clickable.Collect(transform.position);
         Destroy(gameObject);
     }
 }
