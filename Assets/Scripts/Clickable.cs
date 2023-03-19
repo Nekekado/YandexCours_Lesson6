@@ -30,7 +30,7 @@ public class Clickable : MonoBehaviour
     {
         HitEffect hitEffect = Instantiate(_hitEffectPrefab, transform.position, Quaternion.identity);
         hitEffect.Init(_coinsPerClick);
-        _resources.CollectCoins(1, collectPosition);
+        _resources.CollectCoins(_coinsPerClick, collectPosition);
     }
     
     private IEnumerator HitAnimation()

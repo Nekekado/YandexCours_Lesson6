@@ -5,11 +5,6 @@ public class Hover : MonoBehaviour
 {
     [SerializeField] private Clickable _clickable;
 
-    private void OnBecameInvisible()
-    {
-        
-    }
-
     public void SetClickable(Clickable clickable)
     {
         _clickable = clickable;
